@@ -10,7 +10,8 @@ void toggle_bit (int num,int position2);
 int entry();
 int main()
 {
-	int num,position,position1,position2;
+	int position,position1,position2;
+	unsigned char num;
 	while(1)
 	{
 		if(entry()!=0)
@@ -18,7 +19,6 @@ int main()
 		continue;
 		}
 			printf("Enter the Decimal number: \n");
-					//scanf("%d",&num);
 					if(scanf("%d",&num) != 1)
 					{
 						clear_buffer();
@@ -57,19 +57,19 @@ void d2b(int num)
 void set_bit(int num,int position)
 {
 	 num |= (1<<position);
-	 printf("\nThe resulted binary value after bit clear in the entered position is : ");
+	 printf("\nThe resulted binary value after bit Set in the entered position is :  ");
 	 d2b(num);
 }
 void clear_bit(int num,int position1)
 {
 	 num &= ~(1<<position1);
-	 printf("\nThe resulted binary value after bit set in the entered position is : ");
+	 printf("\nThe resulted binary value after bit Clear in the entered position is :  ");
 	 d2b(num);
 }
 void toggle_bit (int num,int position2)
 {
 	 num ^= (1<<position2);
-	 printf("\nThe resulted binary value after bit toggle in the entered position is : ");
+	 printf("\nThe resulted binary value after bit toggle in the entered position is :  ");
 	 d2b(num);
 }
 void clear_buffer()
@@ -80,8 +80,8 @@ void clear_buffer()
 int entry()
 {
 	int option;
-	printf("Enter Below option..\n"
-			"1> Proceed for bit operations.."
+	printf("\nEnter Below option..\n"
+			"1> Proceed for bit operations..\n"
 			"2> Exit..");
 	if(scanf("%d",& option)!=1)
 	{
@@ -98,7 +98,7 @@ int entry()
 	{
 	   //clear_buffer();
 	   getchar();
-	   printf("Press Enter to close the Window..\n");
+	   printf("Press Enter to close the Window..Thanks!\n");
        getchar();
        //return 0;
        exit(0);

@@ -2,10 +2,16 @@
 #include<stdint.h>
 #include<stdlib.h>
 
-
 int main()
+
 {
-	for(int i=1;i<=10;i++)
+	int n;
+	printf("Enter the No of * to be displayed for the Patterns: ");
+	scanf("%d",&n);
+    getchar();
+	printf("  Left Half pyramid : \n");
+	printf("--------------------- \n");
+	for(int i=1;i<=n;i++)
 	{
 		for(int j=1;j<=i;j++)
 		{
@@ -15,10 +21,11 @@ int main()
 	}
 	printf("\n");
 	printf("\n");
-
-	for (int i =1;i <=10;i++)
+	printf(" Right Half pyramid : \n");
+	printf("--------------------- \n");
+	for (int i =1;i <=n;i++)
 	    {
-	        for (int j=1;j<=10-i;j++)
+	        for (int j=1;j<=n-i;j++)
 	        {
 	            printf(" ");
 	        }
@@ -30,10 +37,11 @@ int main()
 	    }
         printf("\n");
 	    printf("\n");
-
-     	for (int i=0;i<10;i++)
+		printf("    Full Pyramid : \n");
+		printf("-------------------- \n");
+     	for (int i=0;i<n;i++)
 		    {
-		        for (int j=0;j<10-i;j++)
+		        for (int j=0;j<n-i;j++)
 		        {
 		            printf(" ");
 		        }
@@ -47,3 +55,4 @@ int main()
 	getchar();
 	return 0;
 }
+
